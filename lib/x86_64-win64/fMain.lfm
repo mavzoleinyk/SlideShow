@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 2563
+  Height = 490
+  Top = 300
+  Width = 799
+  Caption = 'Slide'
+  ClientHeight = 470
+  ClientWidth = 799
+  Menu = MainMenu1
+  LCLVersion = '2.2.2.0'
+  object Panel1: TPanel
+    Left = 13
+    Height = 368
+    Top = 59
+    Width = 777
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderStyle = bsSingle
+    ClientHeight = 364
+    ClientWidth = 773
+    Color = clBlack
+    ParentColor = False
+    TabOrder = 0
+    object Image1: TImage
+      Left = 0
+      Height = 365
+      Top = 0
+      Width = 775
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Center = True
+      Proportional = True
+      Stretch = True
+    end
+  end
+  object Button1: TButton
+    Left = 310
+    Height = 25
+    Top = 435
+    Width = 140
+    Anchors = [akBottom]
+    Caption = 'Next >>>'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object MainMenu1: TMainMenu
+    Left = 20
+    Top = 5
+    object File1: TMenuItem
+      Caption = 'Файл'
+      object Open1: TMenuItem
+        Caption = 'Открыть'
+        OnClick = Open1Click
+      end
+    end
+    object Show1: TMenuItem
+      Caption = 'Демонстрация'
+      object Run1: TMenuItem
+        Caption = 'Запуск'
+        OnClick = Run1Click
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Изображения JPEG|*.jpg'
+    Left = 90
+    Top = 5
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 3000
+    OnTimer = Timer1Timer
+    Left = 160
+    Top = 5
+  end
+end
